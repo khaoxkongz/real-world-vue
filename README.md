@@ -24,6 +24,12 @@ pnpm run build
 pnpm run lint
 ```
 
+### Spin up little API server
+
+```bash
+pnpm dlx json-server --watch db.json
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
