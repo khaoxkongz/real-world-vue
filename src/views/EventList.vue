@@ -7,7 +7,7 @@
 
 <script>
 import EventCard from '@/components/EventCard.vue';
-import axios from 'axios'; // <--- brings in the axios library
+import EventService from '@/services/EventService.js';
 
 export default {
   components: {
@@ -19,10 +19,9 @@ export default {
     };
   },
   created() {
-    axios
-      .get('http://localhost:3000/events') // Does a get request
+    EventService.getEvents() // <-----
       .then((response) => {
-        console.log(response.data); // For now, logs out the response
+        // console.log(response.data); // For now, logs out the response
         this.events = response.data; // <--- set the events when returned
       })
       .catch((error) => {
