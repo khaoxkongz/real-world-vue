@@ -1,14 +1,15 @@
 <template>
-  <div></div>
+  <div>
+    <h4>{{ title }}</h4>
+  </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
-const comname = 'App';
 export default {
-  HelloWorld,
-  comname,
+  data() {
+    return {
+      title: 'Beach Cleanup',
+    };
+  },
 };
 </script>
-
-<style></style>
